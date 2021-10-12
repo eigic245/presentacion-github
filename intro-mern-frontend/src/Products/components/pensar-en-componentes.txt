@@ -1,0 +1,40 @@
+1- Jerarquia de componentes
+
+product layaout
+  Header
+  Addbutton
+  ListProducts
+    Loading
+    Product
+  
+2- crear version estatica componentes
+
+3 - representacion del estado de la app
+
+
+
+comandos que se utilizan
+
+front end: npm start
+
+
+backend: mongod
+backend: npm run start-dev
+
+
+ejecutar mongo en el pc
+
+base de datos
+
+> db.products.update({}, {$set: {"unitaryPrice": 100} })
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+> db.products.update({}, {$set: {"unitaryPrice": 100} }, true)
+WriteResult({
+        "nMatched" : 0,
+        "nUpserted" : 1,
+        "nModified" : 0,
+        "_id" : ObjectId("616376e564a856da5c6f1de0")
+})
+> db.products.find().pretty( )
+{ "_id" : ObjectId("616376e564a856da5c6f1de0"), "unitaryPrice" : 100 }
+>
